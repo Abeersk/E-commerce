@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import hero1 from '@/public/hero1.jpg'; // Importing the image correctly
 import Link from 'next/link';
 
@@ -7,12 +6,20 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Div with specific size, and image as background */}
-      <div 
-        className="relative w-full h-[80vh]" 
-        style={{ backgroundImage: `url(${hero1.src})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      <div
+        className="relative w-full h-[78vh]"
+        style={{
+          backgroundImage: `url(${hero1.src})`,
+          backgroundAttachment: 'fixed', // Keeps the image fixed during scrolling
+          backgroundSize: 'cover',
+          backgroundPosition: 'top', // Adjusts image position for better visibility
+        }}
       >
-        {/* No overlay, just text and button on the right */}
-        <div className="absolute inset-1 flex justify-end items-center">
+        {/* Overlay for reducing opacity */}
+        <div className="absolute inset-0 bg-black bg-opacity-15"></div>
+
+        {/* Content box */}
+        <div className="absolute inset-0 flex justify-end items-center">
           <div className="text-[#22202E] px-20 py-16 bg-[#FFFFFF] bg-opacity-90 rounded-md shadow-lg mr-20">
             {/* Text content */}
             <h1 className="text-2xl font-serif text-left mb-4">
