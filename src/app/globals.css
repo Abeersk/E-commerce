@@ -1,8 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+background-color: #F9F9F9;
+
+}
 #footer{
-    background-color: #2A254B;
+    background-color: #2b2457;
     color:#ffffff
 }
 #hero{

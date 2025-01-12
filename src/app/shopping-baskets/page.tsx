@@ -1,78 +1,92 @@
-import React from 'react'
+import React from 'react';
+import Header from '../components/Header';
+import Image from 'next/image';
+import flower from '@/public/flower.png';
+import features2 from '@/public/features2.jpeg';
+import Footer from '../components/Footer';
+import Link from 'next/link';
 
 const page = () => {
   return (
-    <div>
+    <div className="bg-gray-50 min-h-screen">
+      <Header />
 
+      <div className="container mx-auto px-6 max-w-[1000px]  py-12">
+        <h1 className="text-3xl opacity-65  text-left w-1/2  mb-10">
+          Your shopping cart
+        </h1>
 
-<section className="text-gray-600 body-font">
-  <div className="container px-5 py-24 mx-auto">
-    <div className="flex flex-wrap -m-4">
-      {/* First section: Left side image, Right side text */}
-      <div className="p-4 lg:w-1/2">
-        <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img
-            alt="team"
-            className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-            src="https://dummyimage.com/200x200"
-          />
-          <div className="flex-grow sm:pl-8">
-            <h2 className="title-font font-medium text-lg text-gray-900">
-              Holden Caulfield
-            </h2>
-            <h3 className="text-gray-500 mb-3">UI Developer</h3>
-            <p className="mb-4">
-              DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
-            </p>
+        <ul className="flex justify-between text-[#2A254B] text-lg border-b pb-2 mb-6">
+          <li className="w-1/2 text-left">Product</li>
+          <li className="w-1/4 text-center">Quantity</li>
+          <li className="w-1/4 text-right">Total</li>
+        </ul>
+
+        {/* First Product */}
+        <div className="flex items-center border-b py-4">
+          <div className="flex items-center w-1/2">
+            <Link href='/shopping-basketsnpm run dev'>
+            
+            <Image
+              src={features2}
+              alt="Graystone vase"
+              className="w-28 h-36 object-cover rounded-lg"
+              />
+              </Link>
+            <div className="ml-4">
+              <h2 className="text-lg font-medium text-[#2A254B]">
+                Graystone vase
+              </h2>
+              <p className="text-[#2A254B] text-sm">
+                A timeless ceramic vase with a tri-color grey glaze.
+              </p>
+              <p className="text-[#2A254B]    mt-2">£85</p>
+            </div>
           </div>
+          <div className="w-1/4 text-center">1</div>
+          <div className="w-1/4 text-right font-medium   text-[#2A254B] ">£85</div>
         </div>
-      </div>
-      {/* Right side text (£85) */}
-      <div className="p-4 lg:w-1/2 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900">£85</h1>
-        </div>
-      </div>
-    </div>
 
-    <div className="flex flex-wrap -m-4 mt-12">
-      {/* Second section: Left side image, Right side text */}
-      <div className="p-4 lg:w-1/2">
-        <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img
-            alt="team"
-            className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
-            src="https://dummyimage.com/200x200"
-          />
-          <div className="flex-grow sm:pl-8">
-            <h2 className="title-font font-medium text-lg text-gray-900">
-              Alper Kamu
-            </h2>
-            <h3 className="text-gray-500 mb-3">Designer</h3>
-            <p className="mb-4">
-              DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.
-            </p>
+        {/* Second Product */}
+        <div className="flex items-center border-b py-4">
+          <div className="flex items-center w-1/2">
+            <Image
+              src={flower}
+              alt="Basic white vase"
+              className="w-28 h-36 object-cover rounded-lg"
+            />
+            <div className="ml-4">
+              <h2 className="text-lg font-medium text-[#2A254B]">
+                Basic white vase
+              </h2>
+              <p className="text-[#2A254B] text-sm">
+                Beautiful and simple, this is one for the classics.
+              </p>
+              <p className="text-[#2A254B]    mt-2">£125</p>
+            </div>
           </div>
+          <div className="w-1/4 text-center">1</div>
+          <div className="w-1/4 text-right font-medium text-[#2A254B] ">£125</div>
+        </div>
+
+        {/* Subtotal Section */}
+        <div className="mt-8 text-right">
+          <p className="text-[#4E4D93] text-lg mb-2">
+            Subtotal: <span className="font-bold font-normal	 text-gray-900">£210</span>
+          </p>
+          <p className="text-[#4E4D93] text-sm mb-4">
+            Taxes and shipping are calculated at checkout.
+          </p>
+          <button className="bg-gray-900 text-white px-6 py-3 text-lg rounded">
+            Go to checkout
+          </button>
         </div>
       </div>
-      {/* Right side text (£85) */}
-      <div className="p-4 lg:w-1/2 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900">£85</h1>
-        </div>
-      </div>
+
+      <Footer/>
     </div>
-  </div>
-</section>
 
+);
+};
 
-
-
-
-
-
-    </div>
-  )
-}
-
-export default page
+export default page;

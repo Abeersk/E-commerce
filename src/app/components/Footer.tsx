@@ -1,149 +1,91 @@
 import React from 'react';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <div id='footer' className='overflow-hidden'>
+    <div id="footer" className="bg-[#1A103D] text-white">
       <footer className="py-12 px-4">
-        <div className="container px-5 py-24 mx-auto flex flex-wrap justify-between">
+        <div className="container mx-auto flex flex-wrap justify-between">
+          {/* Menu Section */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium tracking-widest text-sm mb-3">
-              Menu
-            </h2>
-            <nav className="list-none mb-10">
-              <li><a> New arrivals  </a></li>
-              <li><a>Best sellers </a></li>
-              <li><a>Recently viewed</a></li>
-              <li><a>Popular this week</a></li>
-              <li><a>All products</a></li>
+            <h2 className="text-lg font-semibold tracking-wider mb-4">Menu</h2>
+            <nav className="list-none mb-10 space-y-2">
+              <li>New arrivals</li>
+              <li>Best sellers</li>
+              <li>Recently viewed</li>
+              <li>Popular this week</li>
+              <li>All products</li>
             </nav>
           </div>
 
+          {/* Categories Section */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium tracking-widest text-sm mb-3">
-            Categories
-            </h2>
-            <nav className="list-none mb-10">
-              <li><a>Crockery</a></li>
-              <li><a> Furniture</a></li>
-              <li><a>Homeware</a></li>
-              <li><a>Plant pots</a></li>
-              <li><a>Chairs</a></li>
-              <li><a>Crockery</a></li>
+            <h2 className="text-lg font-semibold tracking-wider mb-4">Categories</h2>
+            <nav className="list-none mb-10 space-y-2">
+              <li>Crockery</li>
+              <li>Furniture</li>
+              <li>Homeware</li>
+              <li>Plant pots</li>
+              <li>Chairs</li>
             </nav>
           </div>
 
+          {/* Our Company Section */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium tracking-widest text-sm mb-3">
-            Our company
-            </h2>
-            <nav className="list-none mb-10">
-              <li><a>About us</a></li>
-              <li><a>Vacancies</a></li>
-              <li><a>Contact us </a></li>
-              <li><a>Privacy</a></li>
-              <li><a>Returns policy</a></li>
+            <h2 className="text-lg font-semibold tracking-wider mb-4">Our company</h2>
+            <nav className="list-none mb-10 space-y-2">
+              <li>About us</li>
+              <li>Vacancies</li>
+              <li>Contact us</li>
+              <li>Privacy</li>
+              <li>Returns policy</li>
             </nav>
           </div>
 
+          {/* Mailing List Section */}
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="title-font font-medium tracking-widest text-sm mb-3">
-            Join our mailing list
-            </h2>
-            <div className="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-              <div className="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
-              
-                <input
-                  type="text"
-                  id="footer-field"
-                  name="footer-field"
-                  placeholder='your@email.com'
-                  className="bg-white bg-opacity-15 w-full h-[56px] rounded border focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-              <button id='btn' className="lg:mt-2 bg-white focus:border-indigo-500  focus:ring-indigo-200  xl:mt-0 flex-shrink-0 inline-flex border-0 py-2 px-6 rounded">
-                Button
+            <h2 className="text-lg font-semibold tracking-wider mb-4">Join our mailing list</h2>
+            <div className="relative flex w-full text-center ">
+              <label htmlFor="email" className="leading-7 text-sm text-gray-600"></label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                className="h-[54px] w-[400px] bg-white/15 bg-opacity-60 rounded-l border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-[#FFFFFF] py-2 px-8 leading-8 transition-colors duration-200 ease-in-out"
+              />
+              <button className="text-[#2A254B] bg-[#FFFFFF] border-0 focus:outline-none h-[54px] w-56   hover:bg-indigo-600 text-[12px] rounded-r">
+                Signup
               </button>
             </div>
-        
           </div>
         </div>
 
-        <div>
-          <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
-            
-              
-            <p className="text-sm sm:ml-6 sm:mt-0 mt-4">
-              © 2020 Tailblocks — 
-              <a
-                href="https://twitter.com/knyttneve"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                @knyttneve
-              </a>
-            </p>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-              <a className="ml-6">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                </svg>
-              </a>
-              <a className="ml-6">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                </svg>
-              </a>
-              <a className="ml-6">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
-                </svg>
-              </a>
-              <a className="ml-6">
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={0}
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="none"
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                  />
-                  <circle cx={4} cy={4} r={2} stroke="none" />
-                </svg>
-              </a>
-            </span>
+        {/* Footer Bottom Section */}
+        <div className="container mx-auto py-6 flex flex-col sm:flex-row items-center justify-between">
+          <p className="text-sm">Copyright © 2022 Aven LTD</p>
+          <div className="flex space-x-6 mt-4 sm:mt-0">
+
+          <a href="https://www.facebook.com/abeer.shaikh.7568" target="_blank" rel="noopener noreferrer">
+  <FaFacebookF className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+</a>
+
+
+            <FaTwitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+          
+            <a href="https://www.instagram.com/abeer.shaikh.7568/" target="_blank" rel="noopener noreferrer">
+  <FaInstagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+</a>
+            <a href="https://www.linkedin.com/in/muhammad-abeer-b94a522b7/" target="_blank" rel="noopener noreferrer">
+  <FaLinkedinIn className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer" />
+</a>
+
+
           </div>
         </div>
       </footer>
     </div>
   );
-}
+};
 
 export default Footer;
